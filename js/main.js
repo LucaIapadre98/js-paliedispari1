@@ -8,12 +8,37 @@
    const userChoice = prompt("Inserisci un numero da 1 a 5 ('Scegli se paro o disparo'):");
    let max = 5;
    let min = 1;
+   const sum = userChoice + randomNumber(max, min);
    
+
    console.log(userChoice);
 
-   function numberRandom(max, min) {
+   function randomNumber(max= 5, min= 1) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     console.log(randomNumber);
     return randomNumber;
    }
+
+    console.log(sum);
+
+    function sumNumberRandom(iseven, isodd) {
+        if(sum === iseven){
+            alert("Hai vinto!")
+            console.log("Hai vinto!");
+            return true;
+            
+        }
+        if (sum === isodd){
+            alert("Hai perso!");
+            console.log("Hai perso!");
+            return false;
+        }
+    }
+    console.log(sum);
+    sumNumberRandom();
+    
+    
+
+
+   
 
